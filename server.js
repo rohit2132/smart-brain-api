@@ -52,8 +52,10 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) } );
 // API HANDLING
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) } );
 
-app.listen(process.evn.PORT || 3000, () => {
-    console.log(`app is running on port ${process.env.PORT}`);
+const PORT = process.env.PORT;
+
+app.listen(PORT || 3000, () => {
+    console.log(`app is running on port ${PORT || 3000}`);
 })
 
 /* 
