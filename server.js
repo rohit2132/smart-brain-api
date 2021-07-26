@@ -52,11 +52,19 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) } );
 // API HANDLING
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) } );
 
-app.listen(3000, () => {
-    console.log('app is running on port 3000');
+app.listen(process.evn.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 })
 
+/* 
 
+⬢ salty-shelf-04472
+
+https://salty-shelf-04472.herokuapp.com/ 
+
+https://git.heroku.com/salty-shelf-04472.git
+
+*/
 
 /* 
    / --> res = this is working
